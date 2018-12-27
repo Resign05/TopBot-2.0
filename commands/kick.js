@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
   .addField('Reason', `${kReason}`);
 
   let kickChannel = message.guild.channels.find(`name`,`senior-leadership`);
-  message.guild.member(kUser).kick(kReason);
+  message.guild.member(kUser.id).kick(kReason);
   return kickChannel.send(kickEmbed);
 }
 
