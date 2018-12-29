@@ -27,7 +27,7 @@ module.exports.run = async(bot,message,args) => {
     .setAuthor(`TopBot Help!`, bot.user.displayAvatarURL)
     .setTimestamp()
     .setDescription(`The Bot Prefix Is **${botconfig.PREFIX}**\nThere Are **${cmds.length}** Commands:`)
-    .addField(`**>Commands:**`, `\`${cmds.join(" ")}\``)
+    .addField(`**>Commands:**`, `\`${cmds.join("\` \`")}\``)
     .setFooter(`TopBot`, bot.user.displayAvatarURL);
     return message.author.send(embed);
   }
